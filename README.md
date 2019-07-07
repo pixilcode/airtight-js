@@ -21,10 +21,11 @@ TODO
 * [Meugle](https://github.com/theDragonFire/meugle)
 
 Does your project use `airtight.js`? Submit a pull request adding your name
-to the above list! Knowing 
+to the above list! Knowing that people are using this gives me motivation to
+keep it maintained.
 
 ## Contributing
-If you find a bug or want to recommend an enhancement, please
+If you find a bug or want to recommend an improvement, please
 [let me know](https://github.com/theDragonFire/airtight-js/issues/new). I'll
 do what I can to fix the problem.
 
