@@ -310,8 +310,6 @@ function run_tests() {
     TestSuite.run(suite).print_result();
 }
 
-run_tests();
-
 // Try to export the module
 try {
     module.exports.Test = exports.Test = Test;
