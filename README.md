@@ -15,7 +15,38 @@ TODO
 TODO
 
 ## Example
-TODO
+```js
+const airtight = require("./airtight");
+
+const Test = airtight.Test;
+const assert = airtight.assert;
+const assert_eq = airtight.assert_eq; // Assert equal
+const assert_neq = airtight.assert_neq; // Assert not equal
+
+let test = Test.builder() // Create a test builder
+	.name("Addition Test") // Give the test a name
+
+	// Describe the test (Not required, 
+	// but recommended)
+	.description(
+		"Test that 1 + 1 = 2"
+	)
+
+	// Pass the test as a lambda function
+	.test(() => {
+		assert(1 + 1 === 2);
+		assert_eq(1 + 1, 2);
+		assert_neq(1 + 1, 3);
+	});
+
+// Run the test and print out the results
+Test.run(test).print_result();
+```
+
+Output:
+```
+[Addition Test] Success!
+```
 
 ## Projects Using `airtight.js`
 * [Meugle](https://github.com/theDragonFire/meugle)
