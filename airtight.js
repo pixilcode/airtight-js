@@ -29,7 +29,11 @@ class Test {
         return new TestBuilder();
     }
 
-    static run(test) {
+    static run(test_builder) {
+        let test = test_builder;
+        if (test_builder.build)
+            test = test_builder.build();
+
         try {
             test.test_method();
             return new Result(true, test.name, "Success!", test.name + ": 1 run, 0 failed");
